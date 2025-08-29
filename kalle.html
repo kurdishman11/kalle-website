@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کاڵێ کەمال - هونەر</title>
+<!-- Font Awesome بۆ ئایکۆنەکان -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* --- Basic Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* --- Header --- */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+header h1 {
+    margin-top: 15px;
+    font-size: 2em;
+}
+/* Social Icons */
+.header-social {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+.header-social a {
+    color: inherit;
+    font-size: 1.8em;
+    transition: transform 0.3s, color 0.3s;
+}
+.header-social a:hover {
+    transform: scale(1.2);
+    color: #ff4081;
+}
+
+/* --- Gallery --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Dark Mode Button --- */
+.dark-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* --- Footer / Credits --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 0.9em;
+}
+footer a {
+    color: #0077cc;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #ff4081;
+}
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+body.dark-mode footer a {
+    color: #66aaff;
+}
+body.dark-mode footer a:hover {
+    color: #ff4081;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    header img { width: 120px; height: 120px; }
+    header h1 { font-size: 1.5em; }
+    .header-social a { font-size: 1.5em; }
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+    footer { font-size: 0.8em; }
+}
+@media (min-width: 600px) {
+    header img { width: 150px; height: 150px; }
+    header h1 { font-size: 2em; }
+    .header-social a { font-size: 1.8em; }
+}
+@media (min-width: 900px) {
+    header img { width: 180px; height: 180px; }
+    header h1 { font-size: 2.5em; }
+    .header-social a { font-size: 2em; }
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="wena-yekem.jpg" alt="کاڵێ کەمال">
+    <h1>کاڵێ کەمال</h1>
+    <div class="header-social">
+        <a href="https://www.facebook.com/username" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/username" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.snapchat.com/add/username" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+    </div>
+</header>
+
+<section class="gallery">
+    <img src="wena1.jpg" alt="وێنە 1">
+    <img src="wena2.jpg" alt="وێنە 2">
+    <img src="wena3.jpg" alt="وێنە 3">
+    <img src="wena4.jpg" alt="وێنە 4">
+    <img src="wena5.jpg" alt="وێنە 5">
+    <img src="wena6.jpg" alt="وێنە 6">
+    <img src="wena7.jpg" alt="وێنە 7">
+    <img src="wena8.jpg" alt="وێنە 8">
+    <img src="wena9.jpg" alt="وێنە 9">
+    <img src="wena10.jpg" alt="وێنە 10">
+</section>
+
+<button class="dark-toggle" onclick="toggleDarkMode()">دارک مود</button>
+
+<footer>
+    <p>© 2025 کاڵێ کەمال | هەموو مافی هونەر و وێنەکان پارێزراون</p>
+    <p>بۆ پەیوەندی کردن: 
+        <a href="https://www.instagram.com/username" target="_blank">Instagram</a> | 
+        <a href="https://www.facebook.com/username" target="_blank">Facebook</a> | 
+        <a href="https://www.snapchat.com/add/username" target="_blank">Snapchat</a>
+    </p>
+</footer>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+</script>
+
+</body>
+</html>
